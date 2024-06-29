@@ -19,3 +19,16 @@ class Car extends Vehicle {
         echo "Car honking: Beep Beep!";
     }
 }
+class Truck extends Vehicle {
+    public function honk() {
+        echo "Truck honking: Honk Honk!";
+    }
+}
+
+$car = new Car("Toyota", "Corolla");
+$car->startEngine(); // Outputs: Engine started
+$car->honk();        // Outputs: Car honking: Beep Beep!
+
+$truck = new Truck("Ford", "F-150");
+$truck->startEngine(); // Outputs: Engine started
+$truck->honk(); 
