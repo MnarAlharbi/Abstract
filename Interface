@@ -1,0 +1,35 @@
+interface Shape {
+    public function calculateArea(): float;
+}
+
+class Circle implements Shape {
+    private $radius;
+
+    public function __construct($radius) {
+        $this->radius = $radius;
+    }
+
+    public function calculateArea(): float {
+        return pi() * $this->radius * $this->radius;
+    }
+}
+
+class Rectangle implements Shape {
+    private $width;
+    private $height;
+
+    public function __construct($width, $height) {
+        $this->width = $width;
+        $this->height = $height;
+    }
+
+    public function calculateArea(): float {
+        return $this->width * $this->height;
+    }
+}
+
+$circle = new Circle(5);
+echo $circle->calculateArea(); // Outputs: 78.539816339745
+
+$rectangle = new Rectangle(4, 6);
+echo $rectangle->calculateArea(); // Outputs: 24
